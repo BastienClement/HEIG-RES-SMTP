@@ -7,12 +7,12 @@ import java.util.List;
 
 /**
  * A group of victims.
- * Each group is composed of at least 2 people with one of them designated as sender.
+ * Each group is composed of at least 3 people with one of them designated as sender.
  */
 public class Group {
 	/**
 	 * Randomly build groups from the given list of victims.
-	 * There must be at least 2 people per group and at least one group to form.
+	 * There must be at least 3 people per group and at least one group.
 	 * The last group may contain more people than the others.
 	 *
 	 * @param count   the number of groups to build
@@ -26,8 +26,8 @@ public class Group {
 
 		// Compute victims per groups
 		int victims_per_group = victims.size() / count;
-		if (victims_per_group < 2) {
-			throw new IllegalArgumentException("There must be at least two victims per groups");
+		if (victims_per_group < 3) {
+			throw new IllegalArgumentException("There must be at least 3 victims per groups");
 		}
 
 		// Shuffle the victims list to make it random
