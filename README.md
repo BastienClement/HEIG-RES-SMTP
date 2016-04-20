@@ -42,7 +42,7 @@ and you will have a fake SMTP server listening on port 25. Please note that you 
 
 ![](https://github.com/galedric/HEIG-RES-SMTP/raw/master/figures/diagram.png)
 
-I chose to keep the application structure very simple. I personally find the suggested structure a bit overkill for the simplicity of this project (most notably the interface / implementation separation). There was no need for inheritance or any fancy OO stuff. Just a bunch of classes that encapsulate state and behaviors.
+I chose to keep the application structure very simple. I personally find the suggested structure a bit overkill for the simplicity of this project (most notably the interface / implementation separation). There was no need for inheritance or any fancy OO stuff. Just a bunch of classes that encapsulate states and behaviors.
 
 - The **Main** class creates a single ConfigManager and Sender for the lifetime of the application. It then builds groups of victims by using the `Group.buildGroups` method and for each of them selects and sends a random message from a template.
 - The **ConfigManager** is responsible for reading configuration files and make settings available for the Main class.
